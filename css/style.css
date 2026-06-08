@@ -1,120 +1,80 @@
-```css id="0w5brs"
-/* RESET */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* BODY */
 body{
-    background: linear-gradient(135deg, #f8f0ff, #ffe6f2);
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
+    background:linear-gradient(
+        135deg,
+        #f8f0ff,
+        #ffe6f2
+    );
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-/* TIÊU ĐỀ */
 h1{
-    color: #b30059;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    color:#b30059;
+    text-align:center;
+    margin:30px 0;
 }
 
-/* DANH SÁCH TRANH */
 .product-list{
-    padding: 20px;
+    padding:20px;
 }
 
-/* KHUNG TRANH */
 .product-item{
-    transition: 0.4s;
+    transition:0.4s;
 }
 
-/* CARD */
-.product-item .product-image,
-.product-item .product-info{
-    background: white;
-}
-
-/* KHUNG ẢNH */
-.product-image{
-    padding: 15px;
-    border-radius: 20px 20px 0 0;
-    text-align: center;
-}
-
-/* ẢNH */
-.product-image img{
-    border-radius: 15px;
-    object-fit: cover;
-    transition: 0.4s;
-    border: 4px solid #ff99cc;
-}
-
-/* KHUNG THÔNG TIN */
-.product-info{
-    padding: 15px;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-/* TÊN TRANH */
-.product-info p:first-child{
-    font-size: 20px;
-    font-weight: bold;
-    color: #cc0066;
-    margin-bottom: 10px;
-}
-
-/* TÊN HỌA SĨ */
-.product-info p:nth-child(2){
-    color: #666;
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-/* GIÁ */
-.text-danger{
-    font-size: 22px;
-    color: #ff0066 !important;
-    margin-bottom: 15px;
-}
-
-/* NÚT */
-.btn-primary{
-    background: linear-gradient(45deg, #ff4da6, #cc00ff);
-    border: none;
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-/* HOVER NÚT */
-.btn-primary:hover{
-    background: linear-gradient(45deg, #cc00ff, #ff4da6);
-    transform: scale(1.05);
-}
-
-/* HOVER CARD */
 .product-item:hover{
-    transform: translateY(-10px);
+    transform:translateY(-10px);
 }
 
-/* HOVER ẢNH */
-.product-item:hover img{
-    transform: scale(1.05);
+.product-image{
+    background:white;
+    padding:15px;
+    text-align:center;
+    border-radius:20px 20px 0 0;
 }
 
-/* RESPONSIVE */
-@media screen and (max-width: 768px){
-
-    .product-image img{
-        width: 100% !important;
-        height: auto !important;
-    }
-
+.product-image img{
+    border-radius:15px;
+    border:4px solid #ff99cc;
+    object-fit:cover;
 }
-```
+
+.product-info{
+    background:white;
+    padding:15px;
+    text-align:center;
+    border-radius:0 0 20px 20px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+.product-info p:first-child{
+    color:#cc0066;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.btn-primary{
+    background:linear-gradient(
+        45deg,
+        #ff4da6,
+        #cc00ff
+    );
+    border:none;
+    border-radius:30px;
+    padding:10px 20px;
+    color:white;
+    text-decoration:none;
+}
+
+.btn-primary:hover{
+    background:linear-gradient(
+        45deg,
+        #cc00ff,
+        #ff4da6
+    );
+}
