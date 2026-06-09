@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Sản phẩm - Triển Lãm Tranh</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
 
 <nav class="d-flex justify-content-center gap-3 p-3 bg-light shadow-sm">
-
     <a href="../index.html" class="btn btn-outline-success">Trang chủ</a>
     <a href="san-pham.html" class="btn btn-success">Tranh triển lãm</a>
     <a href="gioi-thieu.html" class="btn btn-outline-success">Giới thiệu</a>
     <a href="lien-he.html" class="btn btn-outline-success">Liên hệ</a>
-
 </nav>
 
 <div class="container mt-4">
@@ -33,7 +27,7 @@
         <!-- Tranh 1 -->
         <div class="col">
             <div class="card h-100 shadow">
-                <img src="../assets/image/girlpearl.jpg" class="card-img-top" alt="Girl with Pearl Earring">
+                <img src="../assets/image/girlpearl.jpg" class="card-img-top">
                 <div class="card-body text-center">
                     <h5>Girl with a Pearl Earring</h5>
                     <p class="text-muted">Johannes Vermeer</p>
@@ -47,7 +41,7 @@
         <!-- Tranh 2 -->
         <div class="col">
             <div class="card h-100 shadow">
-                <img src="../assets/image/lastsupper.jpg" class="card-img-top" alt="Last Supper">
+                <img src="../assets/image/lastsupper.jpg" class="card-img-top">
                 <div class="card-body text-center">
                     <h5>The Last Supper</h5>
                     <p class="text-muted">Leonardo da Vinci</p>
@@ -61,7 +55,7 @@
         <!-- Tranh 3 -->
         <div class="col">
             <div class="card h-100 shadow">
-                <img src="../assets/image/monalisa.jpg" class="card-img-top" alt="Mona Lisa">
+                <img src="../assets/image/monalisa.jpg" class="card-img-top">
                 <div class="card-body text-center">
                     <h5>Mona Lisa</h5>
                     <p class="text-muted">Leonardo da Vinci</p>
@@ -75,7 +69,7 @@
         <!-- Tranh 4 -->
         <div class="col">
             <div class="card h-100 shadow">
-                <img src="../assets/image/starrynight.jpg" class="card-img-top" alt="Starry Night">
+                <img src="../assets/image/starrynight.jpg" class="card-img-top">
                 <div class="card-body text-center">
                     <h5>The Starry Night</h5>
                     <p class="text-muted">Vincent van Gogh</p>
@@ -89,7 +83,7 @@
         <!-- Tranh 5 -->
         <div class="col">
             <div class="card h-100 shadow">
-                <img src="../assets/image/sunflowers.jpg" class="card-img-top" alt="Sunflowers">
+                <img src="../assets/image/sunflowers.jpg" class="card-img-top">
                 <div class="card-body text-center">
                     <h5>Sunflowers</h5>
                     <p class="text-muted">Vincent van Gogh</p>
@@ -103,7 +97,7 @@
         <!-- Tranh 6 -->
         <div class="col">
             <div class="card h-100 shadow">
-                <img src="../assets/image/thescream.jpg" class="card-img-top" alt="The Scream">
+                <img src="../assets/image/thescream.jpg" class="card-img-top">
                 <div class="card-body text-center">
                     <h5>The Scream</h5>
                     <p class="text-muted">Edvard Munch</p>
@@ -117,11 +111,9 @@
     </div>
 </div>
 
-<script src="../js/script.js"></script>
-
 <script>
 function viewDetail(id) {
-    alert("Xem chi tiết tranh: " + id);
+    window.location.href = "chi-tiet.html?id=" + id;
 }
 </script>
 

@@ -1,62 +1,117 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Tranh</title>
 
-    <title>Chi tiết - Triển Lãm Tranh</title>
-
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
 
-<nav>
-    <a href="../index.html">Trang chủ</a>
-    <a href="gioi-thieu.html">Giới thiệu</a>
-    <a href="san-pham.html">Sản phẩm</a>
-    <a href="chi-tiet.html">Chi tiết</a>
-    <a href="lien-he.html">Liên hệ</a>
+<nav class="d-flex justify-content-center gap-3 p-3 bg-light shadow-sm">
+    <a href="../index.html" class="btn btn-outline-success">Trang chủ</a>
+    <a href="san-pham.html" class="btn btn-outline-success">Tranh triển lãm</a>
+    <a href="gioi-thieu.html" class="btn btn-outline-success">Giới thiệu</a>
+    <a href="lien-he.html" class="btn btn-outline-success">Liên hệ</a>
 </nav>
 
-<h1 style="text-align:center; color:green;">🎨 Chi Tiết Tác Phẩm Tranh</h1>
+<div class="container mt-5">
 
-<div class="gallery">
+    <div class="card shadow p-4">
 
-    <div class="art">
-        <img src="../assets/image/girlpearl.jpg" alt="Girl with Pearl Earring">
-        <p>Girl with a Pearl Earring</p>
-    </div>
+        <h1 id="title" class="text-center text-success mb-4"></h1>
 
-    <div class="art">
-        <img src="../assets/image/lastsupper.jpg" alt="Last Supper">
-        <p>The Last Supper</p>
-    </div>
+        <div class="text-center">
+            <img id="image" class="img-fluid rounded shadow" style="max-height:500px;">
+        </div>
 
-    <div class="art">
-        <img src="../assets/image/monalisa.jpg" alt="Mona Lisa">
-        <p>Mona Lisa</p>
-    </div>
+        <div class="mt-4">
+            <h4>Tác giả:</h4>
+            <p id="artist"></p>
 
-    <div class="art">
-        <img src="../assets/image/starrynight.jpg" alt="Starry Night">
-        <p>The Starry Night</p>
-    </div>
+            <h4>Mô tả:</h4>
+            <p id="description"></p>
+        </div>
 
-    <div class="art">
-        <img src="../assets/image/sunflowers.jpg" alt="Sunflowers">
-        <p>Sunflowers</p>
-    </div>
+        <div class="text-center">
+            <a href="san-pham.html" class="btn btn-success">
+                ← Quay lại danh sách tranh
+            </a>
+        </div>
 
-    <div class="art">
-        <img src="../assets/image/thescream.jpg" alt="The Scream">
-        <p>The Scream</p>
     </div>
 
 </div>
 
-<script src="../js/script.js"></script>
+<script>
+
+const paintings = {
+
+    girlpearl: {
+        title: "Girl with a Pearl Earring",
+        artist: "Johannes Vermeer",
+        image: "../assets/image/girlpearl.jpg",
+        description: "Một trong những kiệt tác nổi tiếng nhất của hội họa Hà Lan."
+    },
+
+    lastsupper: {
+        title: "The Last Supper",
+        artist: "Leonardo da Vinci",
+        image: "../assets/image/lastsupper.jpg",
+        description: "Bức tranh mô tả bữa ăn cuối cùng của Chúa Jesus với các tông đồ."
+    },
+
+    monalisa: {
+        title: "Mona Lisa",
+        artist: "Leonardo da Vinci",
+        image: "../assets/image/monalisa.jpg",
+        description: "Tác phẩm nổi tiếng nhất thế giới với nụ cười bí ẩn."
+    },
+
+    starrynight: {
+        title: "The Starry Night",
+        artist: "Vincent van Gogh",
+        image: "../assets/image/starrynight.jpg",
+        description: "Bức tranh thể hiện bầu trời đêm đầy cảm xúc của Van Gogh."
+    },
+
+    sunflowers: {
+        title: "Sunflowers",
+        artist: "Vincent van Gogh",
+        image: "../assets/image/sunflowers.jpg",
+        description: "Một trong những loạt tranh hoa hướng dương nổi tiếng nhất."
+    },
+
+    thescream: {
+        title: "The Scream",
+        artist: "Edvard Munch",
+        image: "../assets/image/thescream.jpg",
+        description: "Biểu tượng nghệ thuật thể hiện sự lo âu và cảm xúc mạnh mẽ."
+    }
+
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+if (paintings[id]) {
+
+    document.getElementById("title").innerText =
+        paintings[id].title;
+
+    document.getElementById("artist").innerText =
+        paintings[id].artist;
+
+    document.getElementById("image").src =
+        paintings[id].image;
+
+    document.getElementById("description").innerText =
+        paintings[id].description;
+
+}
+
+</script>
 
 </body>
 </html>
