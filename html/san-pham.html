@@ -1,11 +1,129 @@
-<link rel="stylesheet" href="../css/style.css">
+<!DOCTYPE html>
+<html lang="vi">
 
-<nav>
-    <a href="../index.html">Trang chủ</a>
-    <a href="gioi-thieu.html">Giới thiệu</a>
-    <a href="san-pham.html">Sản phẩm</a>
-    <a href="chi-tiet.html">Chi tiết</a>
-    <a href="lien-he.html">Liên hệ</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sản phẩm - Triển Lãm Tranh</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<nav class="d-flex justify-content-center gap-3 p-3 bg-light shadow-sm">
+
+    <a href="../index.html" class="btn btn-outline-success">Trang chủ</a>
+    <a href="san-pham.html" class="btn btn-success">Tranh triển lãm</a>
+    <a href="gioi-thieu.html" class="btn btn-outline-success">Giới thiệu</a>
+    <a href="lien-he.html" class="btn btn-outline-success">Liên hệ</a>
+
 </nav>
 
+<div class="container mt-4">
+
+    <h1 class="text-center text-success mb-4">
+        🎨 BỘ SƯU TẬP TRANH TRIỂN LÃM
+    </h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Tranh 1 -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="../assets/image/girlpearl.jpg" class="card-img-top" alt="Girl with Pearl Earring">
+                <div class="card-body text-center">
+                    <h5>Girl with a Pearl Earring</h5>
+                    <p class="text-muted">Johannes Vermeer</p>
+                    <button class="btn btn-success" onclick="viewDetail('girlpearl')">
+                        Xem chi tiết
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tranh 2 -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="../assets/image/lastsupper.jpg" class="card-img-top" alt="Last Supper">
+                <div class="card-body text-center">
+                    <h5>The Last Supper</h5>
+                    <p class="text-muted">Leonardo da Vinci</p>
+                    <button class="btn btn-success" onclick="viewDetail('lastsupper')">
+                        Xem chi tiết
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tranh 3 -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="../assets/image/monalisa.jpg" class="card-img-top" alt="Mona Lisa">
+                <div class="card-body text-center">
+                    <h5>Mona Lisa</h5>
+                    <p class="text-muted">Leonardo da Vinci</p>
+                    <button class="btn btn-success" onclick="viewDetail('monalisa')">
+                        Xem chi tiết
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tranh 4 -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="../assets/image/starrynight.jpg" class="card-img-top" alt="Starry Night">
+                <div class="card-body text-center">
+                    <h5>The Starry Night</h5>
+                    <p class="text-muted">Vincent van Gogh</p>
+                    <button class="btn btn-success" onclick="viewDetail('starrynight')">
+                        Xem chi tiết
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tranh 5 -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="../assets/image/sunflowers.jpg" class="card-img-top" alt="Sunflowers">
+                <div class="card-body text-center">
+                    <h5>Sunflowers</h5>
+                    <p class="text-muted">Vincent van Gogh</p>
+                    <button class="btn btn-success" onclick="viewDetail('sunflowers')">
+                        Xem chi tiết
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tranh 6 -->
+        <div class="col">
+            <div class="card h-100 shadow">
+                <img src="../assets/image/thescream.jpg" class="card-img-top" alt="The Scream">
+                <div class="card-body text-center">
+                    <h5>The Scream</h5>
+                    <p class="text-muted">Edvard Munch</p>
+                    <button class="btn btn-success" onclick="viewDetail('thescream')">
+                        Xem chi tiết
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <script src="../js/script.js"></script>
+
+<script>
+function viewDetail(id) {
+    alert("Xem chi tiết tranh: " + id);
+}
+</script>
+
+</body>
+</html>
